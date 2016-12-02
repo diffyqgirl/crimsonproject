@@ -1,0 +1,12 @@
+defaults for mouseover color behaviour, etc in jquery.mapael.js under defaultOptions
+
+jquery.mapael.js appears to be the same for all projects
+
+tooltip gives hovering mouseover text box in plotted_cities_areas.html
+text gives static text label
+
+overriding default colors in specific areas is in areas -> attrs -> fill and areas -> attrsHover -> fill
+
+overriding default colors in the whole map is near the beginning of ("mapcontainer").mapael under defaultArea
+
+defaultPlot refers to the little blue icons

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <title>Map with a legend where slices are specified with a fixed value instead of min and max values</title>
+    <style type="text/css">
+        body {
+            color: #5d5d5d;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 30px;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* Specific mapael css class are below
+         * 'mapael' class is added by plugin
+        */
+
+        .mapael .map {
+            position: relative;
+        }
+
+        .mapael .mapTooltip {
+            position: absolute;
+            background-color: #fff;
+            moz-opacity: 0.70;
+            opacity: 0.70;
+            filter: alpha(opacity=70);
+            border-radius: 10px;
+            padding: 10px;
+            z-index: 1000;
+            max-width: 200px;
+            display: none;
+            color: #343434;
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.0/raphael-min.js" charset="utf-8"></script>
+    <script src="../../js/jquery.mapael.js" charset="utf-8"></script>
+    <script src="../../js/maps/france_departments.js" charset="utf-8"></script>
+    <script src="../../js/maps/world_countries.js" charset="utf-8"></script>
+    <script src="../../js/maps/usa_states.js" charset="utf-8"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $(".mapcontainer").mapael({
+                map: {
+                    name: "usa_states"
+                },
+                legend: {
+                    plot: {
+                        title: "American cities",
+                        slices: [{
+                            size: 30,
+                            attrs: {
+                                fill: "#26c800"
+                            },
+                            label: "Value 1",
+                            sliceValue: "Value 1"
+                        }, {
+                            size: 30,
+                            attrs: {
+                                fill: "#0088c8"
+                            },
+                            label: "Value 2",
+                            sliceValue: "Value 2"
+                        }, {
+                            size: 30,
+                            attrs: {
+                                fill: "#e9e100"
+                            },
+                            label: "Value 3",
+                            sliceValue: "Value 3"
+                        }]
+                    }
+                },
+                plots: {
+                    'ny': {
+                        latitude: 40.717079,
+                        longitude: -74.00116,
+                        tooltip: {content: "New York"},
+                        value: "Value 3"
+                    },
+                    'an': {
+                        latitude: 61.2108398,
+                        longitude: -149.9019557,
+                        tooltip: {content: "Anchorage"},
+                        value: "Value 3"
+                    },
+                    'sf': {
+                        latitude: 37.792032,
+                        longitude: -122.394613,
+                        tooltip: {content: "San Francisco"},
+                        value: "Value 1"
+                    },
+                    'pa': {
+                        latitude: 19.493204,
+                        longitude: -154.8199569,
+                        tooltip: {content: "Pahoa"},
+                        value: "Value 2"
+                    },
+                    'la': {
+                        latitude: 34.025052,
+                        longitude: -118.192006,
+                        tooltip: {content: "Los Angeles"},
+                        value: "Value 3"
+                    },
+                    'dallas': {
+                        latitude: 32.784881,
+                        longitude: -96.808244,
+                        tooltip: {content: "Dallas"},
+                        value: "Value 2"
+                    },
+                    'miami': {
+                        latitude: 25.789125,
+                        longitude: -80.205674,
+                        tooltip: {content: "Miami"},
+                        value: "Value 3"
+                    },
+                    'washington': {
+                        latitude: 38.905761,
+                        longitude: -77.020746,
+                        tooltip: {content: "Washington"},
+                        value: "Value 2"
+                    },
+                    'seattle': {
+                        latitude: 47.599571,
+                        longitude: -122.319426,
+                        tooltip: {content: "Seattle"},
+                        value: "Value 4"
+                    }
+                }
+            });
+        });
+    </script>
+
+</head>
+
+<body style="zoom: 1;">
+<div class="container">
+
+    <h1>Map with a legend where slices are specified with a fixed value instead of min and max values</h1>
+
+    <div class="mapcontainer mapael">
+        <div class="map"><div class="mapTooltip" style="display: none; left: 84.4px; top: 295.2px;"></div></div>
+
+        <div class="plotLegend">
+            <svg height="132.67195646506778" version="1.1" width="114.265625" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; left: -0.600006px;" data-type="plot" data-index="0">
+            <desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël @@VERSION</desc>
+            <defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs>
+            <text x="5" y="8.796875" text-anchor="start" font-family="&quot;Arial&quot;" font-size="16px" stroke="none" fill="#343434" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: start; font-family: Arial; font-size: 16px;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="5.59375">American cities</tspan></text><circle cx="22.51303441084463" cy="40.106784410844625" r="12.513034410844629" fill="#26c800" stroke="#ffffff" stroke-width="0" stroke-linejoin="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-linejoin: round; cursor: pointer;" data-type="elem" data-index="0" data-hidden="0"></circle><text x="45.06340520501866" y="40.106784410844625" text-anchor="start" font-family="&quot;Arial&quot;" font-size="12px" stroke="none" fill="#343434" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: start; font-family: Arial; font-size: 12px; cursor: pointer;" data-type="label" data-index="0" data-hidden="0"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.403659410844625">Value 4</tspan></text><circle cx="22.51303441084463" cy="75.13285323253389" r="12.513034410844629" fill="#0088c8" stroke="#ffffff" stroke-width="0" stroke-linejoin="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-linejoin: round; cursor: pointer;" data-type="elem" data-index="1" data-hidden="0"></circle><text x="45.06340502114224" y="75.13285323253389" text-anchor="start" font-family="&quot;Arial&quot;" font-size="12px" stroke="none" fill="#343434" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: start; font-family: Arial; font-size: 12px; cursor: pointer;" data-type="label" data-index="1" data-hidden="0"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.39847823253389">Value 2</tspan></text><circle cx="22.51303441084463" cy="110.15892205422315" r="12.513034410844629" fill="#e9e100" stroke="#ffffff" stroke-width="0" stroke-linejoin="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-linejoin: round; cursor: pointer;" data-type="elem" data-index="2" data-hidden="0"></circle><text x="45.06340547154564" y="110.15892205422315" text-anchor="start" font-family="&quot;Arial&quot;" font-size="12px" stroke="none" fill="#343434" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: start; font-family: Arial; font-size: 12px; cursor: pointer;" data-type="label" data-index="2" data-hidden="0"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.393297054223154">Value 3</tspan></text></svg></div>
+    </div>
+
+    <p><b>All example for jQuery Mapael are available <a href="http://www.vincentbroute.fr/mapael/">here</a>.</b></p>
+
+</div>
+
+
+
+</body></html>
