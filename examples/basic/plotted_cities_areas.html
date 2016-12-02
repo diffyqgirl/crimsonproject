@@ -49,9 +49,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.0/raphael-min.js" charset="utf-8"></script>
     <script src="../../js/jquery.mapael.js" charset="utf-8"></script>
     <script src="../../js/maps/france_departments.js" charset="utf-8"></script>
-    <script src="../../js/maps/world_countries.js" charset="utf-8"></script>
-    <script src="../../js/maps/usa_states.js" charset="utf-8"></script>
-    <script src="../../js/content.js" charset="utf-8"></script>
+    <script src="../../js/custom_content.js" charset="utf-8"></script>
     <script src="../../js/colors.js" charset="utf-8"></script>
 
     <script type="text/javascript">
@@ -103,24 +101,24 @@
                         slices: [{
                             size: 30,
                             attrs: {
-                                fill: "#26c800"
+                                fill: GREEN
                             },
-                            label: "Group 1",
-                            sliceValue: "Group 1"
+                            label: "Open",
+                            sliceValue: "Open"
                         }, {
                             size: 30,
                             attrs: {
-                                fill: "#0088c8"
+                                fill: YELLOW
                             },
-                            label: "Group 2",
-                            sliceValue: "Group 2"
+                            label: "Open Weekdays",
+                            sliceValue: "Weekdays"
                         }, {
                             size: 30,
                             attrs: {
-                                fill: "#e9e100"
+                                fill: CRIMSON
                             },
-                            label: "Group 3",
-                            sliceValue: "Group 3"
+                            label: "Closed",
+                            sliceValue: "Closed"
                         }]
                     }
                 },
@@ -129,29 +127,26 @@
                 areas: {
                     "department-56": {
                         text: {content: "Morbihan", attrs: {"font-size": 10}},
-                        tooltip: {content: "moriban_content"}
+                        tooltip: {content: "moriban_content"},
+                        value: "Open"
                     },
 
                     "department-11": {
                         text: {content: "11", attrs: {"font-size": 10}},
                         tooltip: {content: "d11_content"},
-                        attrs: {
-                            fill: LIGHT_BLUE
-                        },
-                        attrsHover: {
-                            fill: CRIMSON
-                        }
+                        value: " Weekdays"
                     },
 
                     "department-56": {
                         text: {content: "56", attrs: {"font-size": 10}},
                         tooltip: {content: "d11_content"},
-                        sliceValue: "Group 2"
+                        value: "Weekdays"
                     },
 
                     "department-29": {
                         text: {content: "Adams", attrs: {"font-size": 10}},
-                        tooltip: {content: format_tooltip("Adams", houses["Adams"])}
+                        tooltip: {content: format_tooltip("Adams", houses["Adams"])},
+                        value: "Closed"
                     },
 
 
@@ -266,17 +261,8 @@
             <span>Alternative content for the map</span>
         </div>
         <div class="areaLegend">
-            <svg height="148.171875" version="1.1" width="285.40625" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; left: -0.545471px; top: -0.181824px;" data-type="area" data-index="0"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël @@VERSION</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs>
-            <text x="5" y="9.0859375" text-anchor="start" font-family="&quot;Arial&quot;" font-size="16px" stroke="none" fill="#343434" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: start; font-family: Arial; font-size: 16px;"><tspan dy="5.4375" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Legend</tspan></text>
-            <rect x="10" y="28.171875" width="30" height="20" rx="0" ry="0" fill="#97e766" stroke="#ffffff" stroke-width="1" stroke-linejoin="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-linejoin: round; cursor: pointer;" data-type="elem" data-index="0" data-hidden="0"></rect>
-            <text x="50" y="38.171875" text-anchor="start" font-family="&quot;Arial&quot;" font-size="12px" stroke="none" fill="#343434" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: start; font-family: Arial; font-size: 12px; cursor: pointer;" data-type="label" data-index="0" data-hidden="0"><tspan dy="4.390625" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Group 1</tspan></text>
-            <rect x="10" y="58.171875" width="30" height="20" rx="0" ry="0" fill="#7fd34d" stroke="#ffffff" stroke-width="1" stroke-linejoin="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-linejoin: round; cursor: pointer;" data-type="elem" data-index="1" data-hidden="0"></rect>
-            <text x="50" y="68.171875" text-anchor="start" font-family="&quot;Arial&quot;" font-size="12px" stroke="none" fill="#343434" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: start; font-family: Arial; font-size: 12px; cursor: pointer;" data-type="label" data-index="1" data-hidden="0"><tspan dy="4.3671875" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Group 2</tspan></text>
-            <rect x="10" y="88.171875" width="30" height="20" rx="0" ry="0" fill="#5faa32" stroke="#ffffff" stroke-width="1" stroke-linejoin="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-linejoin: round; cursor: pointer;" data-type="elem" data-index="2" data-hidden="0"></rect>
-            <text x="50" y="98.171875" text-anchor="start" font-family="&quot;Arial&quot;" font-size="12px" stroke="none" fill="#343434" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: start; font-family: Arial; font-size: 12px; cursor: pointer;" data-type="label" data-index="2" data-hidden="0"><tspan dy="4.3671875" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Group 3</tspan></text><rect x="10" y="118.171875" width="30" height="20" rx="0" ry="0" fill="#3f7d1a" stroke="#ffffff" stroke-width="1" stroke-linejoin="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-linejoin: round; cursor: pointer;" data-type="elem" data-index="3" data-hidden="0"></rect>
-            <text x="50" y="128.171875" text-anchor="start" font-family="&quot;Arial&quot;" font-size="12px" stroke="none" fill="#343434" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: start; font-family: Arial; font-size: 12px; cursor: pointer;" data-type="label" data-index="3" data-hidden="0"><tspan dy="4.3671875" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Group 4</tspan></text>
-            </svg>
-            </div>
+            <span> Legend failed to load </span>
+        </div>
     </div>
 
     <p><b>All example for jQuery Mapael are available <a href="http://www.vincentbroute.fr/mapael/">here</a>.</b></p>
