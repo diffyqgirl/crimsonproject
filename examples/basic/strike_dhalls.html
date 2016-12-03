@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <title>Interhouse</title>
+    <style type="text/css">
+        body {
+            color: #fff;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+        h1 {
+            font-size: 30px;
+            margin: auto;
+            margin-top: 50px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .mapael .map {
+            position: relative;
+        }
+
+        .mapael .mapTooltip {
+            position: absolute;
+            background-color: #474c4b;
+            moz-opacity: 0.70;
+            opacity: 0.70;
+            filter: alpha(opacity=70);
+            border-radius: 10px;
+            padding: 10px;
+            z-index: 1000;
+            max-width: 200px;
+            display: none;
+            color: #fff;
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.0/raphael-min.js" charset="utf-8"></script>
+    <script src="../../js/jquery.mapael.js" charset="utf-8"></script>
+    <script src="../../js/maps/simple_houses5.js" charset="utf-8"></script>
+    <script src="../../js/colors.js" charset="utf-8"></script>
+    <script src="../../js/custom_content_strike.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(".mapcontainer").mapael({
+                map: {
+                    // Set the name of the map to display
+                    name: "simple_houses5",
+                    defaultArea: {
+                        attrs: {
+                            fill: "#f9a695"
+                            , stroke: DARK_GREY
+                        }
+                        , attrsHover: {
+                            fill: CRIMSON
+                        }
+                        , text: {
+                            attrs: {
+                                fill: BLACK
+                            }
+                            , attrsHover: {
+                                fill: "#000"
+                            }
+                        }
+                    }
+                },
+                legend: {
+                    area: {
+                        title: "Houses",
+                        slices: [{
+                            size: 30,
+                            attrs: {
+                                fill: "#aefa90"
+                            },
+                            label: "Open",
+                            sliceValue: "Open"
+                        }, {
+                            size: 30,
+                            attrs: {
+                                fill: "#faed90"
+                            },
+                            label: "Open Weekdays",
+                            sliceValue: "Weekdays"
+                        }, {
+                            size: 30,
+                            attrs: {
+                                fill: LIGHT_GREY
+                            },
+                            label: "Closed",
+                            sliceValue: "Closed"
+                        }]
+                    }
+                },
+                areas: {
+                    "adams": {
+                        text: {content: "Adams", attrs: {"font-size": font_size}},
+                        tooltip: {content: format_tooltip("Adams")},
+                        value: "Closed"
+                    },
+                    "cabot": {
+                        text: {content: "Cabot", attrs: {"font-size": font_size}},
+                        tooltip: {content: format_tooltip("Cabot")},
+                        value: "Closed"
+                    },
+                    "currier": {
+                        text: {content: "Currier", attrs: {"font-size": font_size}},
+                        tooltip: {content: format_tooltip("Currier")},
+                        value: "Open"
+                    },
+                    "dunster": {
+                        text: {content: "Dunster", attrs: {"font-size": font_size}},
+                        tooltip: {content: format_tooltip("Dunster")},
+                        value: "Open"
+                    },
+                    "eliot": {
+                        text: {content: "Eliot", attrs: {"font-size": font_size}},
+                        tooltip: {content: format_tooltip("Eliot")},
+                        value: "Open"
+                    },
+                    "kirkland": {
+                        text: {content: "Kirkland", attrs: {"font-size": font_size}},
+                        tooltip: {content: format_tooltip("Kirkland")},
+                        value: "Open"
+                    },
+                    "leverett": {
+                        text: {content: "Leverett", attrs: {"font-size": font_size}},
+                        tooltip: {content: format_tooltip("Leverett")},
+                        value: "Closed"
+                    },
+                    "lowell": {
+                        text: {content: "Lowell", attrs: {"font-size": font_size}},
+                        tooltip: {content: format_tooltip("Lowell")},
+                        value: "Closed"
+                    },
+                    "mather": {
+                        text: {content: "Mather", attrs: {"font-size": font_size}},
+                        tooltip: {content: format_tooltip("Mather")},
+                        value: "Closed"
+                    },
+                    "pforzheimer": {
+                        text: {content: "Pforzheimer", attrs: {"font-size": font_size}},
+                        tooltip: {content: format_tooltip("Pforzheimer")},
+                        value: "Weekdays"
+                    },
+                    "quincy": {
+                        text: {content: "Quincy", attrs: {"font-size": font_size}},
+                        tooltip: {content: format_tooltip("Quincy")},
+                        value: "Open"
+                    },
+                    "winthrop": {
+                        text: {content: "Winthrop", attrs: {"font-size": font_size}},
+                        tooltip: {content: format_tooltip("Winthrop")},
+                        value: "Weekdays"
+                    }  
+                }    
+            });
+        });
+    </script>
+
+</head>
+
+<body style="zoom: 1;">
+<div class="container">
+
+    <h1>Interhouse Dinner Restrictions</h1>
+
+    <div class="mapcontainer mapael">
+        <div class="areaLegend">
+            <span> Legend failed to load </span>
+        </div>
+        <div class="map">
+            <span>Map failed to load</span>
+        </div>
+        
+    </div>
+
+
+</div>
+
+
+
+</body></html>
