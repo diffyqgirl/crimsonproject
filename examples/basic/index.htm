@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html><head>
     <meta charset="utf-8">
-    <title>Minimal example</title>
+    <title>Interhouse Dinner Restrictions</title>
     <style type="text/css">
         body {
-            color: #5d5d5d;
+            color: #fff;
             font-family: Helvetica, Arial, sans-serif;
         }
 
@@ -15,8 +15,26 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: auto;
+        }
+
+        .mapael .map {
+            position: relative;
+        }
+
+        .mapael .mapTooltip {
+            position: absolute;
+            background-color: #474c4b;
+            moz-opacity: 0.70;
+            opacity: 0.70;
+            filter: alpha(opacity=70);
+            border-radius: 10px;
+            padding: 10px;
+            z-index: 1000;
+            max-width: 200px;
+            display: none;
+            color: #fff;
         }
     </style>
 
@@ -24,10 +42,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.0/raphael-min.js" charset="utf-8"></script>
     <script src="../../js/jquery.mapael.js" charset="utf-8"></script>
-    <script src="../../js/maps/france_departments.js" charset="utf-8"></script>
-    <script src="../../js/maps/world_countries.js" charset="utf-8"></script>
-    <script src="../../js/maps/usa_states.js" charset="utf-8"></script>
     <script src="../../js/maps/simple_houses5.js" charset="utf-8"></script>
+    <script src="../../js/custom_content.js" charset="utf-8"></script>
+    <script src="../../js/colors.js" charset="utf-8"></script>
 
     <script type="text/javascript">
         $(function () {
@@ -35,6 +52,80 @@
                 map: {
                     // Set the name of the map to display
                     name: "simple_houses5"
+
+                    , defaultArea: {
+                        attrs: {
+                            fill: "#f9a695"
+                            , stroke: DARK_GREY
+                        }
+                        , attrsHover: {
+                            fill: CRIMSON
+                        }
+                        , text: {
+                            attrs: {
+                                fill: "#505444"
+                            }
+                            , attrsHover: {
+                                fill: "#000"
+                            }
+                        }
+                    }
+
+                    
+                },
+
+                areas: {
+
+                    "adams": {
+                        text: {content: "Adams", attrs: {"font-size": font_size}},
+                        tooltip: {content: format_tooltip("Adams", houses["Adams"])}
+                    },
+                    "cabot": {
+                        text: {content: "Cabot", attrs: {"font-size": font_size}},
+                        tooltip: {content: format_tooltip("Cabot", houses["Cabot"])}
+                    },
+                    "currier": {
+                        text: {content: "Currier", attrs: {"font-size": font_size}},
+                        tooltip: {content: format_tooltip("Currier", houses["Currier"])}
+                    },
+                    "dunster": {
+                        text: {content: "Dunster", attrs: {"font-size": font_size}},
+                        tooltip: {content: format_tooltip("Dunster", houses["Dunster"])}
+                    },
+                    "eliot": {
+                        text: {content: "Eliot", attrs: {"font-size": font_size}},
+                        tooltip: {content: format_tooltip("Eliot", houses["Eliot"])}
+                    },
+                    "kirkland": {
+                        text: {content: "Kirkland", attrs: {"font-size": font_size}},
+                        tooltip: {content: format_tooltip("Kirkland", houses["Kirkland"])}
+                    },
+                    "leverett": {
+                        text: {content: "Leverett", attrs: {"font-size": font_size}},
+                        tooltip: {content: format_tooltip("Leverett", houses["Leverett"])}
+                    },
+                    
+                    "lowell": {
+                        text: {content: "Lowell", attrs: {"font-size": font_size}},
+                        tooltip: {content: format_tooltip("Lowell", houses["Lowell"])}
+                    },
+                    "mather": {
+                        text: {content: "Mather", attrs: {"font-size": font_size}},
+                        tooltip: {content: format_tooltip("Mather", houses["Mather"])}
+                    },
+                    "pforzheimer": {
+                        text: {content: "Pforzheimer", attrs: {"font-size": font_size}},
+                        tooltip: {content: format_tooltip("Pforzheimer", houses["Pforzheimer"])}
+                    },
+                    "quincy": {
+                        text: {content: "Quincy", attrs: {"font-size": font_size}},
+                        tooltip: {content: format_tooltip("Quincy", houses["Quincy"])}
+                    },
+                    "winthrop": {
+                        text: {content: "Winthrop", attrs: {"font-size": font_size}},
+                        tooltip: {content: format_tooltip("Winthrop", houses["Winthrop"])}
+                    }
+                    
                 }
             });
         });
@@ -42,19 +133,17 @@
 
 </head>
 
-<body style="zoom: 1;">
+<body>
 <div class="container">
 
-    <h1>Minimal example</h1>
+    <h1>Interhouse Dining Restrictions</h1>
 
-    <div class="mapcontainer mapael">
+    <div class="mapcontainer">
         <div class="map">
-            <span>Alternative content for the map</span>
+            <span>Map failed to load</span>
         </div>
 
     </div>
-
-    <p><b>All example for jQuery Mapael are available <a href="http://www.vincentbroute.fr/mapael/">here</a>.</b></p>
 
 </div>
 
