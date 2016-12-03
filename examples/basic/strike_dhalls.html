@@ -65,6 +65,23 @@
                                 fill: "#000"
                             }
                         }
+                    },
+                    defaultPlot: {
+                        attrs: {
+                            fill: "#004a9b"
+                            , opacity: 0.6
+                        }
+                        , attrsHover: {
+                            opacity: 1
+                        }
+                        , text: {
+                            attrs: {
+                                fill: CRIMSON
+                            }
+                            , attrsHover: {
+                                fill: CRIMSON
+                            }
+                        }
                     }
                 },
                 legend: {
@@ -109,7 +126,8 @@
                         },
                         attrsHover: {
                             transform: "s1.5"
-                        }
+                        },
+                        tooltip: {content: "<span style=\"font-weight:bold;\">HUDS Dine-In</span>"}
                     },
                     'protest2': {
                         type: "image",
@@ -123,7 +141,8 @@
                         },
                         attrsHover: {
                             transform: "s1.5"
-                        }
+                        },
+                        tooltip: {content: "<span style=\"font-weight:bold;\">HUDS protest</span>"}
                     },
                 },
                 areas: {
