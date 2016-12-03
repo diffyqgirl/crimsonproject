@@ -29,7 +29,7 @@
                     //width : 1490.604,
                     //height : 585.21198,
                     width : 2000,
-                    height : 2000,
+                    height : 1000,
                     getCoords : function (lat, lon) {
                         // todo
                         return {"x" : lat, "y" : lon};
