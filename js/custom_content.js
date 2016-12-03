@@ -12,8 +12,8 @@ houses["Pforzheimer"] = "5-7:15pm No interhouse on Thurs for community dinner. "
 houses["Quincy"] = "5-7:15pm <br /> No interhouse on Thurs for community dinner. <br /> No first-year students.";
 houses["Winthrop"] = "5-7:15pm <br /> Sa-Th, 5-7pm, Winthrop only; 1 interhouse guest with Wintrop resident only after 7pm. <br /> Fri, No interhouse restrictions; Freshmen only as invited guests.";
 
-function format_tooltip(header, body)
+function format_tooltip(house)
 {
-    return "<b>" + header + "</b> <br />" + body;
+    return "<b>" + house + "</b> <br />" + houses[house];
 }
 var font_size = 72;

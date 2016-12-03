@@ -41,7 +41,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.0/raphael-min.js" charset="utf-8"></script>
     <script src="../../js/jquery.mapael.js" charset="utf-8"></script>
-    <script src="../../js/maps/simple_houses5.js" charset="utf-8"></script>
+    <script src="../../js/maps/houses_3.js" charset="utf-8"></script>
     <script src="../../js/colors.js" charset="utf-8"></script>
     <script src="../../js/custom_content_strike.js" charset="utf-8"></script>
     <script type="text/javascript">
@@ -49,18 +49,18 @@
             $(".mapcontainer").mapael({
                 map: {
                     // Set the name of the map to display
-                    name: "simple_houses5",
+                    name: "houses_3",
                     defaultArea: {
                         attrs: {
-                            fill: "#f9a695"
-                            , stroke: LIGHT_GREY
+                            fill: "#DFDFDF"
+                            , stroke: DARK_GREY
                         }
                         , attrsHover: {
-                            fill: CRIMSON
+                            fill: "#DFDFDF"
                         }
                         , text: {
                             attrs: {
-                                fill: BLACK
+                                fill: "#505444"
                             }
                             , attrsHover: {
                                 fill: "#000"
@@ -118,10 +118,10 @@
                     'protest1': {
                         type: "image",
                         url: "../../marker.png",
-                        width: 48,
-                        height: 160,
-                        x: 650,
-                        y: 550,
+                        width: 90,
+                        height: 300,
+                        x: 1400,
+                        y: 1100,
                         attrs: {
                             opacity: .9
                         },
@@ -133,10 +133,10 @@
                     'protest2': {
                         type: "image",
                         url: "../../marker.png",
-                        width: 48,
-                        height: 160,
-                        x: 1650,
-                        y: 600,
+                        width: 90,
+                        height: 300,
+                        x: 3600,
+                        y: 1170,
                         attrs: {
                             opacity: .9
                         },
@@ -151,73 +151,118 @@
                         text: {content: "Adams", attrs: {"font-size": font_size}},
                         tooltip: {content: format_tooltip("Adams")},
                         value: "Closed",
-                        href: "http://adamshouse.harvard.edu/"
+                        href: "http://adamshouse.harvard.edu/",
+                        attrsHover: {
+                            fill: CRIMSON
+                        }
                     },
                     "cabot": {
                         text: {content: "Cabot", attrs: {"font-size": font_size}},
                         tooltip: {content: format_tooltip("Cabot")},
                         value: "Closed",
-                        href: "http://cabot.harvard.edu/"
+                        href: "http://cabot.harvard.edu/",
+                        attrsHover: {
+                            fill: CRIMSON
+                        }
                     },
                     "currier": {
                         text: {content: "Currier", attrs: {"font-size": font_size}},
                         tooltip: {content: format_tooltip("Currier")},
                         value: "Open",
-                        href: "https://currierquad.wordpress.com/"
+                        href: "https://currierquad.wordpress.com/",
+                        attrsHover: {
+                            fill: CRIMSON
+                        }
                     },
                     "dunster": {
                         text: {content: "Dunster", attrs: {"font-size": font_size}},
                         tooltip: {content: format_tooltip("Dunster")},
                         value: "Open",
-                        href: "https://dunster.harvard.edu/"
+                        href: "https://dunster.harvard.edu/",
+                        attrsHover: {
+                            fill: CRIMSON
+                        }
                     },
                     "eliot": {
                         text: {content: "Eliot", attrs: {"font-size": font_size}},
                         tooltip: {content: format_tooltip("Eliot")},
                         value: "Open",
-                        href: "http://eliot.harvard.edu/"
+                        href: "http://eliot.harvard.edu/",
+                        attrsHover: {
+                            fill: CRIMSON
+                        }
                     },
                     "kirkland": {
                         text: {content: "Kirkland", attrs: {"font-size": font_size}},
                         tooltip: {content: format_tooltip("Kirkland")},
                         value: "Open",
-                        href: "http://kirkland.harvard.edu/"
+                        href: "http://kirkland.harvard.edu/",
+                        attrsHover: {
+                            fill: CRIMSON
+                        }
                     },
                     "leverett": {
                         text: {content: "Leverett", attrs: {"font-size": font_size}},
                         tooltip: {content: format_tooltip("Leverett")},
                         value: "Closed",
-                        href: "http://leverett.harvard.edu/"
+                        href: "http://leverett.harvard.edu/",
+                        attrsHover: {
+                            fill: CRIMSON
+                        }
                     },
                     "lowell": {
                         text: {content: "Lowell", attrs: {"font-size": font_size}},
                         tooltip: {content: format_tooltip("Lowell")},
                         value: "Closed",
-                        href: "http://lowell.harvard.edu/lowell-home"
+                        href: "http://lowell.harvard.edu/lowell-home",
+                        attrsHover: {
+                            fill: CRIMSON
+                        }
                     },
                     "mather": {
                         text: {content: "Mather", attrs: {"font-size": font_size}},
                         tooltip: {content: format_tooltip("Mather")},
                         value: "Closed",
-                        href: "http://mather.harvard.edu/"
+                        href: "http://mather.harvard.edu/",
+                        attrsHover: {
+                            fill: CRIMSON
+                        }
                     },
                     "pforzheimer": {
                         text: {content: "Pforzheimer", attrs: {"font-size": font_size}},
                         tooltip: {content: format_tooltip("Pforzheimer")},
                         value: "Weekdays",
-                        href: "http://pfoho.harvard.edu/"
+                        href: "http://pfoho.harvard.edu/",
+                        attrsHover: {
+                            fill: CRIMSON
+                        }
                     },
                     "quincy": {
                         text: {content: "Quincy", attrs: {"font-size": font_size}},
                         tooltip: {content: format_tooltip("Quincy")},
                         value: "Open",
-                        href: "http://quincy.harvard.edu/"
+                        href: "http://quincy.harvard.edu/",
+                        attrsHover: {
+                            fill: CRIMSON
+                        }
                     },
                     "winthrop": {
                         text: {content: "Winthrop", attrs: {"font-size": font_size}},
                         tooltip: {content: format_tooltip("Winthrop")},
                         value: "Weekdays",
-                        href: "http://www.winthrophouse.net/icb/icb.do"
+                        href: "http://www.winthrophouse.net/icb/icb.do",
+                        attrsHover: {
+                            fill: CRIMSON
+                        }
+                    },
+                    "river": {
+                        attrs: {
+                            fill: "#6486a7",
+                            stroke: DARK_GREY
+                        },
+                        attrsHover: {
+                            fill: "#6486a7"
+                        }
                     }  
                 }    
             });

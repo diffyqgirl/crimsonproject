@@ -16,4 +16,4 @@ function format_tooltip(house)
 {
     return "<b>" + house + "</b> <br />" + houses[house];
 }
-var font_size = 48;
+var font_size = 72;
