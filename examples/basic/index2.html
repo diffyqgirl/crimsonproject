@@ -41,7 +41,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.0/raphael-min.js" charset="utf-8"></script>
     <script src="../../js/jquery.mapael.js" charset="utf-8"></script>
-    <script src="../../js/maps/simple_houses5.js" charset="utf-8"></script>
+    <script src="../../js/maps/houses_3.js" charset="utf-8"></script>
     <script src="../../js/colors.js" charset="utf-8"></script>
     <script src="../../js/custom_content.js" charset="utf-8"></script>
     <script type="text/javascript">
@@ -49,14 +49,14 @@
             $(".mapcontainer").mapael({
                 map: {
                     // Set the name of the map to display
-                    name: "simple_houses5",
+                    name: "houses_3",
                     defaultArea: {
                         attrs: {
-                            fill: "#f9a695"
+                            fill: "#DFDFDF"
                             , stroke: DARK_GREY
                         }
                         , attrsHover: {
-                            fill: CRIMSON
+                            fill: "#DFDFDF"
                         }
                         , text: {
                             attrs: {
@@ -73,63 +73,156 @@
                     "adams": {
                         text: {content: "Adams", attrs: {"font-size": font_size}},
                         tooltip: {content: format_tooltip("Adams", houses["Adams"])},
-                        href: "http://adamshouse.harvard.edu/"
+                        href: "http://adamshouse.harvard.edu/",
+                        attrs: {
+                            fill: "#f9a695"
+                            , stroke: DARK_GREY
+                        }
+                        , attrsHover: {
+                            fill: CRIMSON
+                        }
                     },
                     "cabot": {
                         text: {content: "Cabot", attrs: {"font-size": font_size}},
                         tooltip: {content: format_tooltip("Cabot", houses["Cabot"])},
-                        href: "http://cabot.harvard.edu/"
+                        href: "http://cabot.harvard.edu/",
+                        attrs: {
+                            fill: "#f9a695"
+                            , stroke: DARK_GREY
+                        }
+                        , attrsHover: {
+                            fill: CRIMSON
+                        }
                     },
                     "currier": {
                         text: {content: "Currier", attrs: {"font-size": font_size}},
                         tooltip: {content: format_tooltip("Currier", houses["Currier"])},
-                        href: "https://currierquad.wordpress.com/"
+                        href: "https://currierquad.wordpress.com/",
+                        attrs: {
+                            fill: "#f9a695"
+                            , stroke: DARK_GREY
+                        }
+                        , attrsHover: {
+                            fill: CRIMSON
+                        }
                     },
                     "dunster": {
                         text: {content: "Dunster", attrs: {"font-size": font_size}},
                         tooltip: {content: format_tooltip("Dunster", houses["Dunster"])},
-                        href: "https://dunster.harvard.edu/"
+                        href: "https://dunster.harvard.edu/",
+                        attrs: {
+                            fill: "#f9a695"
+                            , stroke: DARK_GREY
+                        }
+                        , attrsHover: {
+                            fill: CRIMSON
+                        }
                     },
                     "eliot": {
                         text: {content: "Eliot", attrs: {"font-size": font_size}},
                         tooltip: {content: format_tooltip("Eliot", houses["Eliot"])},
-                        href: "http://eliot.harvard.edu/"
+                        href: "http://eliot.harvard.edu/",
+                        attrs: {
+                            fill: "#f9a695"
+                            , stroke: DARK_GREY
+                        }
+                        , attrsHover: {
+                            fill: CRIMSON
+                        }
                     },
                     "kirkland": {
                         text: {content: "Kirkland", attrs: {"font-size": font_size}},
                         tooltip: {content: format_tooltip("Kirkland", houses["Kirkland"])},
-                        href: "http://kirkland.harvard.edu/"
+                        href: "http://kirkland.harvard.edu/",
+                        attrs: {
+                            fill: "#f9a695"
+                            , stroke: DARK_GREY
+                        }
+                        , attrsHover: {
+                            fill: CRIMSON
+                        }
                     },
                     "leverett": {
                         text: {content: "Leverett", attrs: {"font-size": font_size}},
                         tooltip: {content: format_tooltip("Leverett", houses["Leverett"])},
-                        href: "http://leverett.harvard.edu/"
+                        href: "http://leverett.harvard.edu/",
+                        attrs: {
+                            fill: "#f9a695"
+                            , stroke: DARK_GREY
+                        }
+                        , attrsHover: {
+                            fill: CRIMSON
+                        }
                     },
                     
                     "lowell": {
                         text: {content: "Lowell", attrs: {"font-size": font_size}},
                         tooltip: {content: format_tooltip("Lowell", houses["Lowell"])},
-                        href: "http://lowell.harvard.edu/lowell-home"
+                        href: "http://lowell.harvard.edu/lowell-home",
+                        attrs: {
+                            fill: "#f9a695"
+                            , stroke: DARK_GREY
+                        }
+                        , attrsHover: {
+                            fill: CRIMSON
+                        }
                     },
                     "mather": {
                         text: {content: "Mather", attrs: {"font-size": font_size}},
                         tooltip: {content: format_tooltip("Mather", houses["Mather"])},
-                        href: "http://mather.harvard.edu/"
+                        href: "http://mather.harvard.edu/",
+                        attrs: {
+                            fill: "#f9a695"
+                            , stroke: DARK_GREY
+                        }
+                        , attrsHover: {
+                            fill: CRIMSON
+                        }
                     },
                     "pforzheimer": {
                         text: {content: "Pforzheimer", attrs: {"font-size": font_size}},
                         tooltip: {content: format_tooltip("Pforzheimer", houses["Pforzheimer"])},
-                        href: "http://pfoho.harvard.edu/"
+                        href: "http://pfoho.harvard.edu/",
+                        attrs: {
+                            fill: "#f9a695"
+                            , stroke: DARK_GREY
+                        }
+                        , attrsHover: {
+                            fill: CRIMSON
+                        }
                     },
                     "quincy": {
                         text: {content: "Quincy", attrs: {"font-size": font_size}},
                         tooltip: {content: format_tooltip("Quincy", houses["Quincy"])},
-                        href: "http://quincy.harvard.edu/"
+                        href: "http://quincy.harvard.edu/",
+                        attrs: {
+                            fill: "#f9a695"
+                            , stroke: DARK_GREY
+                        }
+                        , attrsHover: {
+                            fill: CRIMSON
+                        }
                     },
                     "winthrop": {
                         text: {content: "Winthrop", attrs: {"font-size": font_size}},
                         tooltip: {content: format_tooltip("Winthrop", houses["Winthrop"])},
-                        href: "http://www.winthrophouse.net/icb/icb.do"
+                        href: "http://www.winthrophouse.net/icb/icb.do",
+                        attrs: {
+                            fill: "#f9a695"
+                            , stroke: DARK_GREY
+                        }
+                        , attrsHover: {
+                            fill: CRIMSON
+                        }
+                    },
+                    "river": {
+                        attrs: {
+                            fill: "#6486a7"
+                            , stroke: DARK_GREY
+                        }
+                        , attrsHover: {
+                            fill: "#6486a7"
+                        }
                     }
                     
                 }

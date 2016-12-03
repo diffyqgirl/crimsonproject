@@ -16,4 +16,4 @@ function format_tooltip(header, body)
 {
     return "<b>" + header + "</b> <br />" + body;
 }
-var font_size = 48;
+var font_size = 72;
